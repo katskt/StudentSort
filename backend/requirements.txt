@@ -1,0 +1,3 @@
+supabase
+pip install python-dotenv
+reportlab
