@@ -6,7 +6,7 @@ import os
 
 from peedeeeff import validatePDF
 app = Flask(__name__)
-CORS(app, origins="https://student-sort-pu8l-rgmkte2v4-katskts-projects.vercel.app")  # allow only your Next.js dev server
+CORS(app, origins="https://student-sort-pu8l.vercel.app/")  # allow only your Next.js dev server
 @app.route("/", methods=["GET"])
 def home():
     return "Flask backend is running"
