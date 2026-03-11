@@ -2,9 +2,11 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import pandas as pd
 from validateForm import validateForm, getParameter, sortStudents
+import os
+
 from peedeeeff import validatePDF
 app = Flask(__name__)
-CORS(app, origins="http://localhost:3000")  # allow only your Next.js dev server
+CORS(app, origins="https://student-sort-pu8l-rgmkte2v4-katskts-projects.vercel.app")  # allow only your Next.js dev server
 @app.route("/", methods=["GET"])
 def home():
     return "Flask backend is running"
@@ -33,4 +35,4 @@ def pdf():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5001)
+    app.run(debug=False, host="0.0.0.0", port=int(os.environ.get("PORT", 5001)))
