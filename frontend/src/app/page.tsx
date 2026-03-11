@@ -62,7 +62,7 @@ export default function Home() {
 
       formData.append("entries", JSON.stringify(entries));
 
-      const res = await fetch("http://localhost:5001/pdf", {
+      const res = await fetch(`${API_BASE}/pdf`, {
         method: "POST",
         body: formData,
       });
