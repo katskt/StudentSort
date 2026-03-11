@@ -5,7 +5,7 @@ import { useFetchClassrooms } from "@/app/hooks/useFetchClassrooms";
 import { useSeatingForm } from "@/app/hooks/useSeatingForm";
 import Table from "@/app/components/Table";
 import Modal from "@/app/components/Modal";
-const API_BASE = "http://localhost:5001";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE;
 export default function Home() {
   const [spreadResult, setSpreadResult] = useState(null);
   const [displayDownloadPDF, setDisplayDownloadPDF] = useState(false);
