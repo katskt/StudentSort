@@ -1,4 +1,4 @@
-pip install python-dotenv
+python-dotenv
 reportlab
 flask
 flask-cors
